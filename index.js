@@ -177,9 +177,6 @@ class ServerlessCustomDomain {
         this.addResources(deploymentId);
         this.addOutputs(domain);
       })
-      .catch((err) => {
-        throw new Error(`Error: Could not set up basepath mapping. Try running sls create_domain first.\n${err}`);
-      });
   }
 
   getRoute53HostedZoneId() {
