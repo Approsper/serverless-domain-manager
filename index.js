@@ -316,7 +316,7 @@ class ServerlessCustomDomain {
     }
 
     // If user define an ApiGatewayStage resources add it into the dependsOn array
-    if (service.provider.compiledCloudFormationTemplate.Resources.ApiGatewayStage) {
+    if (service.provider.compiledCloudFormationTemplate.Resources.ApiGatewayStage || service.custom.customDomain.implicitStage) {
       dependsOn.push('ApiGatewayStage');
     }
 
